@@ -23,4 +23,17 @@ MYSQL_RANDOM_ROOT_PASSWORD=true
 Run `docker-compose up`, open your browser at http://localhost:8080/
 and setup your LiveHelperChat instance (use `db` as database host!)
 
+...or
+
+Setup it using HTTPie (https://httpie.org/):
+
+```
+http POST localhost:8080/index.php/site_admin/install/install/1
+http --form POST localhost:8080/index.php/site_admin/install/install/2 DatabaseUsername=lhc DatabasePassword=lhc DatabaseHost=db DatabasePort=3306 DatabaseDatabaseName=lhc
+http --form POST localhost:8080/index.php/site_admin/install/install/3 AdminUsername=admin AdminPassword=mysecretpassword AdminPassword1=mysecretpassword AdminEmail=admin@example.com DefaultDepartament=head AdminName= AdminSurname=
+
+```
+
+(of course you can use e.g. curl to do it)
+
 Enjoy :)
