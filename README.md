@@ -21,6 +21,6 @@ MYSQL_RANDOM_ROOT_PASSWORD=true
 ```
 
 Run `docker-compose up`, open your browser at http://localhost:8080/
-and setup your LiveHelperChat instance.
+and setup your LiveHelperChat instance (use `db` as database host!)
 
 Enjoy :)
