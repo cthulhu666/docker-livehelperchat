@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+    - "8080:80"
+
+  db:
+    image: mysql
+    env_file: .env
+   
