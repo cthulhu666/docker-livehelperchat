@@ -1,8 +1,8 @@
 FROM tutum/apache-php:latest
-MAINTAINER jakub.gluszecki@gmail.com
+LABEL maintainer="jakub.gluszecki@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV TAG 2.65v
+ENV TAG 3.20v
 
 RUN apt-get update && \
     apt-get -y install php5-curl && \
